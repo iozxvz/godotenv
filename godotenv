@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -e
+
+title() {
+    echo -e "\033[1;91m>> $1\033[0m"
+}
+
+DIDAENV_ROOT="$HOME/.godotenv"
+
+export LC_ALL="en_US.UTF-8"
+
+title "Git Check"
+$DIDAENV_ROOT/related_gits/GitCheck.sh $1
+
+echo -e "\033[1;92m👍 成功\033[0m"
